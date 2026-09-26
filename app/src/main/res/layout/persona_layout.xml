@@ -26,6 +26,13 @@
         android:text="Fecha de nacimiento: "
         android:textSize="16sp" />
 
+    <TextView
+        android:id="@+id/tvGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Género: "
+        android:textSize="16sp" />
+
     <View style="@style/Divider" />
 
 </LinearLayout>

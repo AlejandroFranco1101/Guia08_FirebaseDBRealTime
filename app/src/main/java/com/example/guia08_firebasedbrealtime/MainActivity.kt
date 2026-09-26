@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("nombre", persona.nombre)
             intent.putExtra("dui", persona.dui)
             intent.putExtra("fechaNacimiento", persona.fechaNacimiento)
+            intent.putExtra("genero", persona.genero)
             startActivity(intent)
         }
 
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("nombre", "")
             intent.putExtra("dui", "")
             intent.putExtra("fechaNacimiento", "")
+            intent.putExtra("genero", "")
             intent.putExtra("apellido", "")
             intent.putExtra("telefono", "")
             intent.putExtra("edad", "")

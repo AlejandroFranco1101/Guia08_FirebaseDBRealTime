@@ -17,6 +17,7 @@ class AddPersonaActivity : AppCompatActivity() {
     private var edtDUI: EditText? = null
     private var edtNombre: EditText? = null
     private var edtFechaNacimiento: EditText? = null
+    private var edtGenero: EditText? = null
     private var key: String = ""
     private var accion: String = ""
     private lateinit var database: DatabaseReference
@@ -37,6 +38,7 @@ class AddPersonaActivity : AppCompatActivity() {
         edtNombre = findViewById(R.id.edtNombre)
         edtDUI = findViewById(R.id.edtDUI)
         edtFechaNacimiento = findViewById(R.id.edtFechaNacimiento)
+        edtGenero = findViewById(R.id.edtGenero)
 
         // Obtener los datos enviados desde la actividad principal.
         val datos: Bundle? = intent.extras
@@ -45,6 +47,7 @@ class AddPersonaActivity : AppCompatActivity() {
             edtDUI?.setText(it.getString("dui", ""))
             edtNombre?.setText(it.getString("nombre", ""))
             edtFechaNacimiento?.setText(it.getString("fechaNacimiento", ""))
+            edtGenero?.setText(it.getString("genero", ""))
             accion = it.getString("accion", "")
         }
     }
@@ -53,6 +56,7 @@ class AddPersonaActivity : AppCompatActivity() {
         val nombre: String = edtNombre?.text.toString()
         val dui: String = edtDUI?.text.toString()
         val fechaNacimiento: String = edtFechaNacimiento?.text.toString()
+        val genero: String = edtGenero?.text.toString()
 
         database = FirebaseDatabase.getInstance().getReference("personas")
 
@@ -60,7 +64,8 @@ class AddPersonaActivity : AppCompatActivity() {
         val persona = Persona(
             dui = dui,
             nombre = nombre,
-            fechaNacimiento = fechaNacimiento
+            fechaNacimiento = fechaNacimiento,
+            genero = genero
         )
 
         if (accion == "a") {

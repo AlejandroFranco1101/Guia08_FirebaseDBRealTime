@@ -30,6 +30,14 @@
         android:inputType="date"
         android:minHeight="48dp" />
 
+    <EditText
+        android:id="@+id/edtGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Género"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="150dp"
