@@ -22,6 +22,14 @@
         android:inputType="text"
         android:minHeight="48dp" />
 
+    <EditText
+        android:id="@+id/edtFechaNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de nacimiento"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="150dp"

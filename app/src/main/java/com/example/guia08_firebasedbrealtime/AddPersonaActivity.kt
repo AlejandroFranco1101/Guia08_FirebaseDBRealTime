@@ -16,6 +16,7 @@ class AddPersonaActivity : AppCompatActivity() {
 
     private var edtDUI: EditText? = null
     private var edtNombre: EditText? = null
+    private var edtFechaNacimiento: EditText? = null
     private var key: String = ""
     private var accion: String = ""
     private lateinit var database: DatabaseReference
@@ -35,6 +36,7 @@ class AddPersonaActivity : AppCompatActivity() {
     private fun inicializar() {
         edtNombre = findViewById(R.id.edtNombre)
         edtDUI = findViewById(R.id.edtDUI)
+        edtFechaNacimiento = findViewById(R.id.edtFechaNacimiento)
 
         // Obtener los datos enviados desde la actividad principal.
         val datos: Bundle? = intent.extras
@@ -42,6 +44,7 @@ class AddPersonaActivity : AppCompatActivity() {
             key = it.getString("key", "")
             edtDUI?.setText(it.getString("dui", ""))
             edtNombre?.setText(it.getString("nombre", ""))
+            edtFechaNacimiento?.setText(it.getString("fechaNacimiento", ""))
             accion = it.getString("accion", "")
         }
     }
@@ -49,11 +52,16 @@ class AddPersonaActivity : AppCompatActivity() {
     fun guardar(view: View?) {
         val nombre: String = edtNombre?.text.toString()
         val dui: String = edtDUI?.text.toString()
+        val fechaNacimiento: String = edtFechaNacimiento?.text.toString()
 
         database = FirebaseDatabase.getInstance().getReference("personas")
 
         // Formar el objeto Persona que se enviará a Firebase.
-        val persona = Persona(dui, nombre)
+        val persona = Persona(
+            dui = dui,
+            nombre = nombre,
+            fechaNacimiento = fechaNacimiento
+        )
 
         if (accion == "a") {
             // Agregar un nuevo registro con una clave generada por Firebase.
