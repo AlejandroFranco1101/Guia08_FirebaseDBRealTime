@@ -5,6 +5,7 @@ data class Persona(
     var nombre: String? = null,
     var fechaNacimiento: String? = null,
     var genero: String? = null,
+    var peso: Double? = null,
     var key: String? = null,
     var per: MutableMap<String, Boolean> = mutableMapOf()
 ) {
@@ -14,6 +15,7 @@ data class Persona(
             "nombre" to nombre,
             "fechaNacimiento" to fechaNacimiento,
             "genero" to genero,
+            "peso" to peso,
             "per" to per
         )
     }

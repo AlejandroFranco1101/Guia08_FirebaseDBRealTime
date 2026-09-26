@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("dui", persona.dui)
             intent.putExtra("fechaNacimiento", persona.fechaNacimiento)
             intent.putExtra("genero", persona.genero)
+            intent.putExtra("peso", persona.peso?.toString().orEmpty())
             startActivity(intent)
         }
 
@@ -91,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("dui", "")
             intent.putExtra("fechaNacimiento", "")
             intent.putExtra("genero", "")
+            intent.putExtra("peso", "")
             intent.putExtra("apellido", "")
             intent.putExtra("telefono", "")
             intent.putExtra("edad", "")
