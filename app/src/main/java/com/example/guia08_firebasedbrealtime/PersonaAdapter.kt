@@ -23,6 +23,7 @@ class PersonaAdapter(private val context: Activity, var personas: List<Persona>)
         val tvFechaNacimiento = rowView.findViewById<TextView>(R.id.tvFechaNacimiento)
         val tvGenero = rowView.findViewById<TextView>(R.id.tvGenero)
         val tvPeso = rowView.findViewById<TextView>(R.id.tvPeso)
+        val tvAltura = rowView.findViewById<TextView>(R.id.tvAltura)
 
         // Obtener el objeto Persona en la posición actual.
         val persona = personas[position]
@@ -33,6 +34,7 @@ class PersonaAdapter(private val context: Activity, var personas: List<Persona>)
         tvFechaNacimiento.text = "Fecha de nacimiento: ${persona.fechaNacimiento.orEmpty()}"
         tvGenero.text = "Género: ${persona.genero.orEmpty()}"
         tvPeso.text = "Peso: ${persona.peso?.let { "$it kg" }.orEmpty()}"
+        tvAltura.text = "Altura: ${persona.altura?.let { "$it m" }.orEmpty()}"
 
         return rowView
     }
