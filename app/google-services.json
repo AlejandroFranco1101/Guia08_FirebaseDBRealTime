@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "356796661405",
+    "firebase_url": "https://fir-dbrealtime-1ca45-default-rtdb.firebaseio.com",
+    "project_id": "fir-dbrealtime-1ca45",
+    "storage_bucket": "fir-dbrealtime-1ca45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356796661405:android:0904d42f9bcd10b4969e74",
+        "android_client_info": {
+          "package_name": "com.example.guia08_firebasedbrealtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg4rNfX1U18rRNZIlB3z_ljKXJ6GPwcFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
